@@ -38,18 +38,41 @@ dev_dependencies:
   build_runner: ^2.4.8
 
   flutter_flavorizr: ^2.2.3
+  mocktail: ^1.0.4
 ```
 
 ## Launch the flutter by flavor
 
+在跑之前請進行 `flutter pub get`
+
+執行查看App跑這個：
 ```
 flutter run --flavor development -t lib/main_development.dart
 ```
 
 ## Testing with flavor
 
+測試時跑這個部分：
 ```
 flutter test --flavor development
+```
+
+預期結果：
+```bash
+codetest % flutter test --flavor development
+00:02 +0: flutter-codetest-240906/codetest/test/pages/launches_page_test.dart: LaunchesPage show loading indicator
+error: Exception: 測試錯誤: 案例01
+00:02 +2: flutter-codetest-240906/codetest/test/pages/launches_page_test.dart: LaunchesPage show error message
+error: Exception: 測試錯誤: 案例02
+00:02 +4: All tests passed!
+```
+
+### For Testing
+
+```dart
+  // TODO: 1.測試加載狀態時是否顯示加載指示器。
+  // TODO: 2.測試錯誤狀態時是否顯示錯誤消息。
+  // TODO: 3.測試數據加載成功時是否正確顯示Launches list。
 ```
 
 ## Git Branch Rules
