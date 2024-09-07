@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            onPressed: () => context.go('/launches'),
+            onPressed: () => context.push('/launches'),
             child: const Text('Go to the launchers page'),
           ),
         ],

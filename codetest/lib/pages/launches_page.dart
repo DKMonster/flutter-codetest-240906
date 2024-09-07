@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:codetest/config/text.dart';
 import 'package:codetest/config/color.dart';
 
@@ -12,9 +13,12 @@ class LaunchesPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: appBarColor,
         elevation: 4,
-        leading: const Icon(
-          Icons.arrow_back,
-          color: appBarIconColor,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: appBarIconColor,
+          ),
+          onPressed: () => context.pop(),
         ),
         title: const Text(
           'All Launches',
