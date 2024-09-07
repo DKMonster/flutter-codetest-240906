@@ -21,6 +21,9 @@ dependencies:
   flutter_riverpod: ^2.5.1
   riverpod_annotation: ^2.3.5
 
+  http: ^1.2.2
+  intl: ^0.19.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -53,6 +56,8 @@ flutter test --flavor development
 ## CHANGE LOG
 
 0.1.0
+- fix(home): fix the go router to push not replace it.
+- feat(launches): Add the basic text and color setting. and implement the scrollbar and appbar.
 - fix(readme): Update the branch rules and add the CHANGE LOG
 - feat(router): implement GoRouter for navigation
 - add the basic flutter setting, include the flavor and codetest.

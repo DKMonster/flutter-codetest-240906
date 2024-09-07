@@ -10,5 +10,5 @@ const bodyIconColor = Color(0xFFF5F5F5);
 
 const subTextActionColor = Color(0xFFdcbbac);
 
-const textColor = Color(0xFFe3e3e3);
-const subTextColor = Color(0xFFdfdfdf);
+const textColor = Color(0xFFdfdfdf);
+const subTextColor = Color(0xFFa3a3a3);
