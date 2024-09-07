@@ -1,0 +1,24 @@
+flavors:
+  production:
+    app:
+      name: "CodeTest"
+    android:
+      applicationId: "com.example.codetest"
+    ios:
+      bundleId: "com.example.codetest"
+
+  staging:
+    app:
+      name: "CodeTest Staging"
+    android:
+      applicationId: "com.example.codetest"
+    ios:
+      bundleId: "com.example.codetest"
+
+  development:
+    app:
+      name: "CodeTest Devlopment"
+    android:
+      applicationId: "com.example.codetest"
+    ios:
+      bundleId: "com.example.codetest"
