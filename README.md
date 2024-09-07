@@ -44,4 +44,15 @@ flutter run --flavor development -t lib/main_development.dart
 flutter test --flavor development
 ```
 
+## Git Branch Rules
+- develop: 這主要專注於開發產品線
+- feature: 當需要開發新功能時必須先從 `develop` 獨立出來（這次用不到）
+- master: 這主要用於發佈正式版本（推上線版本正常來說需要用PR，但這次作業只要發佈版本合併即可。
+- hotfix: 正式版本發生問題可透過此版本進行修復（這次用不到）
+
 ## CHANGE LOG
+
+0.1.0
+- fix(readme): Update the branch rules and add the CHANGE LOG
+- feat(router): implement GoRouter for navigation
+- add the basic flutter setting, include the flavor and codetest.
