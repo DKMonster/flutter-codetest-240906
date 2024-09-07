@@ -1,6 +1,8 @@
+import 'package:codetest/models/launch.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:codetest/config/text.dart';
 import 'package:codetest/config/color.dart';
@@ -67,17 +69,7 @@ class LaunchesPage extends ConsumerWidget {
                 itemCount: launchList.length,
                 itemBuilder: (context, index) {
                   final launch = launchList[index];
-                  return ListTile(
-                    title: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(launch.flightName, style: subTextStyle),
-                        Text(launch.missionName, style: textStyle),
-                      ],
-                    ),
-                    subtitle: Text(launch.launchDate, style: subTextStyle),
-                    trailing: Image.network(launch.missionPatch),
-                  );
+                  return _buildListTile(launch);
                 },
               ),
             ),
@@ -97,6 +89,25 @@ class LaunchesPage extends ConsumerWidget {
         ],
       ),
       onPressed: () {},
+    );
+  }
+
+  Widget _buildListTile(Launch launch) {
+    return ListTile(
+      title: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(launch.flightName, style: subTextStyle),
+          Text(launch.missionName, style: textStyle),
+        ],
+      ),
+      subtitle: Text(launch.launchDate, style: subTextStyle),
+      trailing: CachedNetworkImage(
+        imageUrl: launch.missionPatch,
+        width: 50,
+        height: 50,
+        errorWidget: (context, url, error) => const Icon(Icons.error),
+      ),
     );
   }
 }

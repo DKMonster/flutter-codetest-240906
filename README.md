@@ -1,6 +1,10 @@
 # flutter-codetest-240906
 Make the flutter app from the API list and using the Riverpod and goRouter to manage.
 
+![Home Page](codetest/assets/images/Screenshot_20240907-160711.png)
+
+![Launches Page](codetest/assets/images/Screenshot_20240907-160715.png)
+
 ## Basic information
 
 Flutter stable 3.24.1
@@ -23,6 +27,7 @@ dependencies:
 
   http: ^1.2.2
   intl: ^0.19.0
+  cached_network_image: ^3.4.1
 
 dev_dependencies:
   flutter_test:
@@ -55,7 +60,9 @@ flutter test --flavor development
 
 ## CHANGE LOG
 
-0.1.0
+### 0.1.0
+- feat(launch): add the cache image network.
+- feat(launch): add the launch api data and make the state mangagment and services and build the launch class.
 - fix(home): fix the go router to push not replace it.
 - feat(launches): Add the basic text and color setting. and implement the scrollbar and appbar.
 - fix(readme): Update the branch rules and add the CHANGE LOG
