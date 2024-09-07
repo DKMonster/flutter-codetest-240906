@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../flavors.dart';
+import 'package:go_router/go_router.dart';
+
+import 'package:codetest/flavors.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,6 +13,7 @@ class HomePage extends StatelessWidget {
         title: Text(F.title),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
             child: Text(
@@ -18,7 +21,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () => context.go('/launches'),
             child: const Text('Go to the launchers page'),
           ),
         ],
