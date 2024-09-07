@@ -84,6 +84,7 @@ error: Exception: 測試錯誤: 案例02
 ## CHANGE LOG
 
 ### 0.1.0
+- feat(test): write the launches testing.
 - feat(launch): add the cache image network.
 - feat(launch): add the launch api data and make the state mangagment and services and build the launch class.
 - fix(home): fix the go router to push not replace it.
